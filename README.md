@@ -8,7 +8,7 @@
 [![CI](https://github.com/openlxcn/openlx-weixin-baimindan/actions/workflows/ci.yml/badge.svg)](https://github.com/openlxcn/openlx-weixin-baimindan/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-174e43)](LICENSE)
 
-[官网体验](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [一键安装](#一键安装给智能体一句话) · [直接安装](#直接安装选择你的电脑) · [功能](#它能做什么) · [使用示例](#安装后怎样使用) · [English](README.en.md)
+[官网体验](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [一键安装](#一键安装给智能体一句话) · [直接安装](#直接安装选择你的电脑) · [功能](#它能做什么) · [使用示例](#安装后怎样使用) · [服务群与联系](#服务群与联系) · [English](README.en.md)
 
 ## 为什么开发它
 
@@ -169,6 +169,19 @@ Windows 对应 `scripts/doctor.ps1`、`scripts/check-update.ps1`。具体回退�
 **授权失败或提交超时怎么办？** 运行 doctor，核查目标公众号与权限；保留原 media_id / publish_id 查询，避免重复写入。参见[故障排查](skills/openlx-weixin-baimindan/references/TROUBLESHOOTING.md)。
 
 </details>
+
+## 服务群与联系
+
+安装使用、公众号授权与白名单服务问题，欢迎扫码联系。
+
+<table>
+<tr><th align="center">白名单服务群</th><th align="center">会长贺双全 · 个人企业微信</th></tr>
+<tr><td align="center">安装咨询、公众号授权与白名单服务对接</td><td align="center">商务合作、项目交流与资源对接</td></tr>
+<tr><td align="center"><a href="assets/wechat-whitelist-service-qr.png"><img src="assets/wechat-whitelist-service-qr.png" width="264" alt="OpenLX 微信公众号白名单服务群企业微信二维码"></a></td><td align="center"><a href="assets/he-shuangquan-wecom-qr.png"><img src="assets/he-shuangquan-wecom-qr.png" width="264" alt="会长贺双全个人企业微信二维码"></a></td></tr>
+<tr><td align="center">微信扫码加入服务群</td><td align="center">微信扫码添加贺双全</td></tr>
+</table>
+
+点击二维码可查看原图。手机访问可在[官网联系区域](https://wx.openlx.cn/#contact)查看；如群二维码失效，可添加贺双全企业微信联系入群。
 
 ## 版本历史与参与
 

@@ -8,7 +8,7 @@
 
 **v0.1.1 beta · GitHub Pre-release**
 
-[Website](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [中文](README.md) · [Releases](https://github.com/openlxcn/openlx-weixin-baimindan/releases) · [Request contract](skills/openlx-weixin-baimindan/references/HANDOFF_CONTRACT.md)
+[Website](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [Contact](#service-group-and-contact) · [中文](README.md) · [Releases](https://github.com/openlxcn/openlx-weixin-baimindan/releases) · [Request contract](skills/openlx-weixin-baimindan/references/HANDOFF_CONTRACT.md)
 
 ## Why it exists
 
@@ -122,6 +122,19 @@ sh scripts/check-update.sh --agent codex
 ```
 
 Windows has equivalent `.ps1` scripts. See [update / rollback](skills/openlx-weixin-baimindan/references/UPDATE.md) and [troubleshooting](skills/openlx-weixin-baimindan/references/TROUBLESHOOTING.md).
+
+## Service group and contact
+
+Scan with WeChat for installation help, account authorization support or project enquiries.
+
+<table>
+<tr><th align="center">WeChat Allowlist Service Group<br>白名单服务群</th><th align="center">Chairman He Shuangquan<br>会长贺双全 · Personal WeCom</th></tr>
+<tr><td align="center">Skill installation and WeChat account authorization support</td><td align="center">Business collaboration and project enquiries</td></tr>
+<tr><td align="center"><a href="assets/wechat-whitelist-service-qr.png"><img src="assets/wechat-whitelist-service-qr.png" width="264" alt="OpenLX WeChat Allowlist Service Group QR code"></a></td><td align="center"><a href="assets/he-shuangquan-wecom-qr.png"><img src="assets/he-shuangquan-wecom-qr.png" width="264" alt="Chairman He Shuangquan personal WeCom QR code"></a></td></tr>
+<tr><td align="center">Scan to join the service group</td><td align="center">Scan to add He Shuangquan</td></tr>
+</table>
+
+Click a QR code to view the original image, or open the [website contact section](https://wx.openlx.cn/#contact). If the group code has expired, contact He Shuangquan to request an invitation.
 
 ## History and support
 
