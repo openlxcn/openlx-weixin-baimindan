@@ -10,6 +10,8 @@
 
 [官网体验](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [一键安装](#一键安装给智能体一句话) · [直接安装](#直接安装选择你的电脑) · [功能](#它能做什么) · [使用示例](#安装后怎样使用) · [服务群与联系](#服务群与联系) · [English](README.en.md)
 
+[Claude / Cursor 插件安装说明](PLUGIN_INSTALL.md)
+
 ## 为什么开发它
 
 内容已经准备好了，却因为换了电脑、切换 Wi-Fi、外出办公或服务器 IP 变化，卡在公众号接口白名单上：重新登录后台、确认出口 IP、维护白名单，再回来重试。

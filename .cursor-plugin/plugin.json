@@ -1,0 +1,19 @@
+{
+  "name": "openlx-weixin-baimindan",
+  "version": "0.1.1",
+  "description": "OpenLX 微信公众号免白名单发布：首次扫码授权后，通过长期在线的网关执行素材上传、草稿创建、明确授权的发布及原任务状态查询。当前为测试版。",
+  "author": {
+    "name": "OpenLX"
+  },
+  "homepage": "https://wx.openlx.cn/skills/openlx-weixin-baimindan",
+  "repository": "https://github.com/openlxcn/openlx-weixin-baimindan",
+  "license": "MIT",
+  "keywords": [
+    "wechat",
+    "微信公众号",
+    "publishing",
+    "openlx",
+    "beta"
+  ],
+  "logo": "assets/openlx-logo.png"
+}
