@@ -27,7 +27,7 @@
 ```text
 请帮我安装「OpenLX 微信公众号发布免登录白名单 Skill」。
 官方来源：https://github.com/openlxcn/openlx-weixin-baimindan
-请下载最新测试版技能包，核验官网 Manifest（https://wx.openlx.cn/api/skills/openlx-weixin-baimindan/manifest），并根据你当前智能体支持的技能安装或导入方式完成安装。已有版本请先备份；安装后检查技能是否能正常加载，并告诉我下一步如何扫码授权公众号。本次只安装技能，不提交或发布公众号内容。
+如果 GitHub 无法访问、下载或要求登录，不必登录 GitHub，直接从官网下载：https://wx.openlx.cn/skills/openlx-weixin-baimindan 。请读取官网 Manifest 的 official_mirror_url 下载同版本技能包，并核验 SHA256。请下载最新测试版技能包，核验官网 Manifest（https://wx.openlx.cn/api/skills/openlx-weixin-baimindan/manifest），并根据你当前智能体支持的技能安装或导入方式完成安装。已有版本请先备份；安装后检查技能是否能正常加载，并告诉我下一步如何扫码授权公众号。本次只安装技能，不提交或发布公众号内容。
 ```
 
 ## 安装、更新与回退

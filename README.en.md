@@ -10,6 +10,8 @@ This standalone skill does not write, rewrite, format or illustrate content, and
 
 WorkBuddy, Doubao Office (豆包办公), Qianwen Office (千问办公), Baidu Dazi (百度搭子), ZCode, Trae Work and Qoder have been tested successfully by the OpenLX team, as confirmed by the Owner on 2026-09-05. Import the same standalone skill through each host’s supported skill installation mechanism. Codex, Claude Code and Cursor have native skill directory installers.
 
+If GitHub is unavailable or asks you to sign in, use the official website download instead. Read the official Manifest, download its `official_mirror_url` and verify the SHA256; no GitHub login is required.
+
 For installation through your agent, copy the prompt in the [website installation guide](https://wx.openlx.cn/skills/openlx-weixin-baimindan#install) into its chat.
 
 First-party Shell and PowerShell installers require Python 3.9+. Choose codex, claude or cursor explicitly. The default source is the official mirror; use --source github --version 0.1.0 for GitHub. Packages are checked against SHA256. Local changes are backed up and require a separate confirmation before replacement.
