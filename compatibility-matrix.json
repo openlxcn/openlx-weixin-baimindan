@@ -6,7 +6,10 @@
     "loading": "BLOCKED",
     "invocation": "BLOCKED",
     "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "原生CLI调用被现有API凭据401阻止；目录安装与doctor通过。"
+    "notes": "原生CLI调用被现有API凭据401阻止；目录安装与doctor通过。",
+    "agent_name": "Codex",
+    "display_note": "支持原生 Skill 目录安装",
+    "installation_mode": "native_directory"
   },
   {
     "agent_id": "claude",
@@ -15,7 +18,10 @@
     "loading": "PASS",
     "invocation": "PARTIAL",
     "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "原生宿主已加载，doctor与非阻断检查返回；原生更新执行未取得工具级读回。"
+    "notes": "原生宿主已加载，doctor与非阻断检查返回；原生更新执行未取得工具级读回。",
+    "agent_name": "Claude Code",
+    "display_note": "支持原生 Skill 目录安装",
+    "installation_mode": "native_directory"
   },
   {
     "agent_id": "cursor",
@@ -24,6 +30,79 @@
     "loading": "BLOCKED",
     "invocation": "BLOCKED",
     "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "应用已安装，原生Agent未登录；目录安装与doctor通过。"
+    "notes": "应用已安装，原生Agent未登录；目录安装与doctor通过。",
+    "agent_name": "Cursor",
+    "display_note": "支持原生 Skill 目录安装",
+    "installation_mode": "native_directory"
+  },
+  {
+    "agent_id": "workbuddy",
+    "agent_name": "WorkBuddy",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "doubao-office",
+    "agent_name": "豆包办公",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "qianwen-office",
+    "agent_name": "千问办公",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "baidu-dazi",
+    "agent_name": "百度搭子",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "zcode",
+    "agent_name": "ZCode",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "trae-work",
+    "agent_name": "Trae Work",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
+  },
+  {
+    "agent_id": "qoder",
+    "agent_name": "Qoder",
+    "status": "VERIFIED",
+    "verification_basis": "OWNER_CONFIRMED_END_TO_END",
+    "confirmed_at": "2026-09-05",
+    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "display_note": "OpenLX 团队实测可用",
+    "installation_mode": "host_skill_import"
   }
 ]

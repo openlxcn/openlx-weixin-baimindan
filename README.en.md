@@ -8,10 +8,14 @@ This standalone skill does not write, rewrite, format or illustrate content, and
 
 [Install and product](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [Chinese guide](README.md) · [Compatibility](compatibility-matrix.json)
 
+WorkBuddy, Doubao Office (豆包办公), Qianwen Office (千问办公), Baidu Dazi (百度搭子), ZCode, Trae Work and Qoder have been tested successfully by the OpenLX team, as confirmed by the Owner on 2026-09-05. Import the same standalone skill through each host’s supported skill installation mechanism. Codex, Claude Code and Cursor have native skill directory installers.
+
+For installation through your agent, copy the prompt in the [website installation guide](https://wx.openlx.cn/skills/openlx-weixin-baimindan#install) into its chat.
+
 First-party Shell and PowerShell installers require Python 3.9+. Choose codex, claude or cursor explicitly. The default source is the official mirror; use --source github --version 0.1.0 for GitHub. Packages are checked against SHA256. Local changes are backed up and require a separate confirmation before replacement.
 
 Version checks run on first use after seven days, never block the gateway task and never update automatically. Rollback restores the previous local backup. Personal OpenLX access credentials are kept outside the skill and update state; never supply a WeChat AppSecret.
 
-See the Chinese reference set for the exact existing API fields and error codes. Only VERIFIED matrix rows mean real installation, loading, invocation and update have all passed. An accepted publishing job is not a published article; an uncertain request must not be blindly retried.
+See the Chinese reference set for the exact existing API fields and error codes. The compatibility matrix distinguishes Owner-confirmed team testing from the recorded installer and host checks. An accepted publishing job is not a published article; an uncertain request must not be blindly retried.
 
 [License](LICENSE) · [Trademarks](TRADEMARKS.md) · [Security](SECURITY.md) · [Support](SUPPORT.md)
