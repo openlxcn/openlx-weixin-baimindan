@@ -17,7 +17,7 @@ def hashes(p):
  return {str(x.relative_to(p)).replace('\\','/'):digest(x.read_bytes()) for x in sorted(p.rglob('*')) if x.is_file() and '__pycache__' not in x.parts}
 def fetch(url,timeout=15):
  if not url.startswith('https://'): raise ValueError('HTTPS_REQUIRED')
- with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':ID+'/0.1.0'}),timeout=timeout) as r:
+ with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':ID+'/0.1.1'}),timeout=timeout) as r:
   if not r.url.startswith('https://'): raise ValueError('HTTPS_REQUIRED')
   return r.read(30*1024*1024+1)
 def manifest(a):

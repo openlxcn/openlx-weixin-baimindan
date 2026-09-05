@@ -1,1 +1,1 @@
-测试版问题请使用 GitHub Issues，提供操作系统、宿主版本、Skill 版本和脱敏错误码。授权、权益、优惠券和支付请进入 https://wx.openlx.cn/account 。
+问题请提交 GitHub Issues，仅提供技能版本、宿主版本、脱敏错误码与复现步骤。不得提交个人访问凭据、公众号密钥或客户原始内容。授权问题请进入 https://wx.openlx.cn/account 。

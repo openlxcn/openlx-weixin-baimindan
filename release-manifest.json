@@ -7,7 +7,7 @@
   "release_channel": "beta",
   "stable": false,
   "latest": {
-    "beta": "0.1.0",
+    "beta": "0.1.1",
     "stable": null
   },
   "versions": {
@@ -16,6 +16,24 @@
       "pre_release": true,
       "gateway_api_compatibility": "POST /v2/proxy/{publish,draft-get,draft-count,publish-status}; x-api-key",
       "summary": "独立准备请求交接、首方安装、7天检查、确认更新和回退",
+      "files": [
+        {
+          "name": "openlx-weixin-baimindan-v0.1.0.zip",
+          "sha256": "e865114be203a6e173b2629e3ef338eef0e7a1ba7c4d10e83dec4bbe3c953a12",
+          "size": 365670,
+          "github_url": "https://github.com/openlxcn/openlx-weixin-baimindan/releases/download/v0.1.0/openlx-weixin-baimindan-v0.1.0.zip",
+          "official_mirror_url": "https://wx.openlx.cn/downloads/openlx-weixin-baimindan/v0.1.0/openlx-weixin-baimindan-v0.1.0.zip"
+        }
+      ],
+      "source_commit": "4d7881eeeccf79834c37a28acf234365dab25b36",
+      "built_at": "2026-09-05T06:48:18+00:00",
+      "released_at": "2026-09-05T06:48:18+00:00"
+    },
+    "0.1.1": {
+      "tag": "v0.1.1",
+      "pre_release": true,
+      "gateway_api_compatibility": "POST /v2/proxy/{publish,draft-get,draft-count,publish-status}; x-api-key",
+      "summary": "精简为扫码授权与内容交接；补全转载、音视频素材合同；收紧数据边界",
       "files": []
     }
   },

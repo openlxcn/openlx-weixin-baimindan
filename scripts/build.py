@@ -8,7 +8,7 @@ def main():
  subprocess.run(['node','--test'],cwd=R,check=True)
  allow=json.loads((R/'public-package-allowlist.json').read_text(encoding='utf-8'))
  v=(R/'VERSION').read_text(encoding='utf-8').strip()
- if v!='0.1.0': raise ValueError('First release limited to 0.1.0')
+ if not __import__('re').fullmatch(r'0\.\d+\.\d+',v): raise ValueError('BETA_VERSION_REQUIRED')
  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
  epoch=int(subprocess.check_output(['git','show','-s','--format=%ct','HEAD'],cwd=R,text=True).strip())
  out=R/'dist'; out.mkdir(exist_ok=True)

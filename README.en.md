@@ -1,23 +1,17 @@
 # OpenLX WeChat Official Account IP Allowlist Skill
 
-Public beta v0.1.0, GitHub Pre-release; not stable.
+v0.1.1 beta · GitHub Pre-release.
 
-Changing computers or networks should not mean repeatedly signing into the WeChat account console to maintain the API IP allowlist. After the required first-time QR authorization, the always-on OpenLX gateway executes prepared requests.
+Changing computers or networks should not require repeatedly signing into the WeChat console to maintain the API IP allowlist. After first-time QR authorization, the always-on OpenLX gateway executes prepared requests for the specified account.
 
-This standalone skill does not write, rewrite, format or illustrate content, and has no other Skill dependency. It accepts an explicitly selected account and prepared payload, routes a draft or explicitly confirmed publishing request, and reports the real gateway result. WeChat permissions, security and content rules still apply.
+Supports article and image-post drafts, explicitly requested publication, authorized WeChat reprints, existing-draft submission, and video/audio material upload. Podcast audio uses the audio material path. Material upload is not public publication; no automatic podcast subscription or rebroadcast is performed.
 
-[Install and product](https://wx.openlx.cn/skills/openlx-weixin-baimindan) · [Chinese guide](README.md) · [Compatibility](compatibility-matrix.json)
+The skill does not write, format or generate content, upload workspace history, or connect to the customer's other business systems. Only the required operation payload and credentials go to the gateway; the gateway returns the WeChat result. Platform permissions and rules still apply.
 
-WorkBuddy, Doubao Office (豆包办公), Qianwen Office (千问办公), Baidu Dazi (百度搭子), ZCode, Trae Work and Qoder have been tested successfully by the OpenLX team, as confirmed by the Owner on 2026-09-05. Import the same standalone skill through each host’s supported skill installation mechanism. Codex, Claude Code and Cursor have native skill directory installers.
+[Install](https://wx.openlx.cn/skills/openlx-weixin-baimindan#install) · [QR authorization](https://wx.openlx.cn/account?authorize=1) · [Chinese guide](README.md)
 
-If GitHub is unavailable or asks you to sign in, use the official website download instead. Read the official Manifest, download its `official_mirror_url` and verify the SHA256; no GitHub login is required.
+If GitHub is unavailable or asks for login, use the official Manifest's official_mirror_url and verify SHA256. No GitHub login is required. Native directory installers support Codex, Claude Code and Cursor; other hosts use their own skill import mechanism. Team-tested hosts also include WorkBuddy, Doubao Office, Qianwen Office, Baidu Dazi, ZCode, Trae Work and Qoder.
 
-For installation through your agent, copy the prompt in the [website installation guide](https://wx.openlx.cn/skills/openlx-weixin-baimindan#install) into its chat.
+Nonblocking version checks occur on first use after seven days. Updates need confirmation and protect local edits. No background daemon or installation telemetry. Store personal access credentials outside the skill; never send WeChat AppSecret. Query the same draft or publishing ID, and never blindly retry an uncertain write.
 
-First-party Shell and PowerShell installers require Python 3.9+. Choose codex, claude or cursor explicitly. The default source is the official mirror; use --source github --version 0.1.0 for GitHub. Packages are checked against SHA256. Local changes are backed up and require a separate confirmation before replacement.
-
-Version checks run on first use after seven days, never block the gateway task and never update automatically. Rollback restores the previous local backup. Personal OpenLX access credentials are kept outside the skill and update state; never supply a WeChat AppSecret.
-
-See the Chinese reference set for the exact existing API fields and error codes. The compatibility matrix distinguishes Owner-confirmed team testing from the recorded installer and host checks. An accepted publishing job is not a published article; an uncertain request must not be blindly retried.
-
-[License](LICENSE) · [Trademarks](TRADEMARKS.md) · [Security](SECURITY.md) · [Support](SUPPORT.md)
+[License](LICENSE) · [Data boundaries](skills/openlx-weixin-baimindan/references/SECURITY_AND_PRIVACY.md) · [Support](SUPPORT.md)

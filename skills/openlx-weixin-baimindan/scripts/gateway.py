@@ -8,17 +8,28 @@ def request(h):
  if not h.get('user_intent'): raise ValueError('USER_INTENT_MISSING')
  if not isinstance(payload,dict): raise ValueError('PREPARED_PAYLOAD_MISSING: supply resolved JSON object')
  if payload.get('appid')!=target: raise ValueError('TARGET_ACCOUNT_MISMATCH')
+ media_type=payload.get('type','article')
+ if action in ('CREATE_DRAFT','SUBMIT_EXPLICIT_PUBLISH') and media_type in ('voice','video'):
+  raise ValueError('MEDIA_UPLOAD_ONLY: use UPLOAD_MEDIA; material upload is not public publication')
  if action=='CREATE_DRAFT':
   if payload.get('is_draft') is not True: raise ValueError('DRAFT_FLAG_REQUIRED')
   endpoint='publish'
  elif action=='SUBMIT_EXPLICIT_PUBLISH':
   if h.get('explicit_publication_confirmation') is not True or payload.get('is_draft') is not False: raise ValueError('EXPLICIT_PUBLICATION_CONFIRMATION_REQUIRED')
   endpoint='publish'
+ elif action=='UPLOAD_MEDIA':
+  if media_type not in ('video','voice') or not payload.get('media_url'): raise ValueError('MEDIA_PAYLOAD_REQUIRED')
+  if media_type=='video' and not payload.get('title'): raise ValueError('VIDEO_TITLE_REQUIRED')
+  endpoint='publish'
  elif action=='QUERY_STATUS':
   endpoint='draft-get' if payload.get('media_id') else 'publish-status' if payload.get('publish_id') else None
   if not endpoint: raise ValueError('QUERY_ID_MISSING')
  elif action=='CHECK_AUTHORIZATION': endpoint='draft-count'
  else: raise ValueError('ACTION_UNSUPPORTED')
+ allowed={'appid','type','title','content','images','image_urls','cover_url','cover_base64','media_url','source_url','is_draft','author','digest','cover_media_id','thumb_media_id','media_id','publish_id','content_source_url','need_open_comment','only_fans_can_comment','show_cover_pic'}
+ if set(payload)-allowed: raise ValueError('UNSUPPORTED_PAYLOAD_FIELDS: remove unrelated fields')
+ if action=='CREATE_DRAFT' and media_type not in ('article','newspic','reproduce'): raise ValueError('DRAFT_TYPE_UNSUPPORTED')
+ if action=='SUBMIT_EXPLICIT_PUBLISH' and media_type not in ('article','newspic','reproduce','existing'): raise ValueError('PUBLISH_TYPE_UNSUPPORTED')
  key=os.environ.get('OPENLX_WEIXIN_API_KEY')
  if not key: raise ValueError('OPENLX_ACCESS_CREDENTIAL_MISSING')
  headers={'Content-Type':'application/json','x-api-key':key}

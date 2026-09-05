@@ -1,25 +1,21 @@
 ---
 name: openlx-weixin-baimindan
-description: Route already-prepared WeChat Official Account requests through the always-on OpenLX gateway; inspect first-time authorization, diagnose changing client IP allowlists, query draft or publishing status, and check or update this skill. Do not use for writing, rewriting, formatting, illustrating, reviewing, SEO or content planning.
+description: Authorize a WeChat Official Account and route prepared articles, image posts, authorized reprints, video or audio materials through the always-on OpenLX gateway. Diagnose changing-client-IP allowlist problems and query the original operation. Do not use for writing, editing or generating content.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   channel: beta
   homepage: https://wx.openlx.cn/skills/openlx-weixin-baimindan
 ---
 # OpenLX 微信公众号发布免登录白名单 Skill
 
 换电脑、换网络，不再反复登录公众号后台修改 IP 白名单。
-它不写文章、不排版、不生图，只负责把已经准备好的微信公众号发布请求，通过 OpenLX 长期在线网关稳定送达。
-首次仍需微信开放平台扫码授权，微信权限、安全、频次和内容规则仍然存在。
+首次由公众号管理员扫码授权，后续请求交给长期在线的 OpenLX 网关执行。微信授权、账号权限和平台规则仍然适用。
 
-说明中的正向场景可以自动触发本技能；用户明确授权的是网关动作，不要求每次手工输入技能名。
+## 使用
+1. 读取 [请求合同](references/HANDOFF_CONTRACT.md)，确认目标公众号、当前操作、已准备好的内容和素材。只传本次执行所需数据。
+2. 按 [授权说明](references/AUTHORIZATION.md) 获取个人访问凭据，从环境变量 `OPENLX_WEIXIN_API_KEY` 或用户既有安全存储读取；不保存公众号 AppSecret。
+3. 运行 `python3 scripts/gateway.py <handoff.json>`。支持图文、小绿书图片消息、微信原文转载、已有草稿提交，以及视频、声音和播客音频素材上传。
+4. 草稿使用同一 media_id 读回；公开提交必须有本次明确指令及 explicit_publication_confirmation=true，并查询同一 publish_id。视频和声音当前返回素材 ID，不得说成草稿或公开发布；播客按准备好的音频或微信原文处理。
+5. 写入结果不明时不得自动重试。原样报告网关拒绝或能力限制，不生成替代内容。
 
-## 执行
-1. 仅在使用本技能时运行 `python3 scripts/manager.py check-update --agent <codex|claude|cursor>`。首次或间隔7天检查，失败不阻断当前任务，无后台服务，不自动更新。
-2. 读取 [HANDOFF_CONTRACT](references/HANDOFF_CONTRACT.md)，锁定用户提供的目标公众号、动作及原始准备数据。缺失返回 `PREPARED_PAYLOAD_MISSING` 或 `TARGET_ACCOUNT_MISSING`，不得补写。
-3. 凭据从环境变量 `OPENLX_WEIXIN_API_KEY` 或用户既有安全存储读取，绝不写入技能或状态文件。登录、授权、权益复用 [AUTHORIZATION](references/AUTHORIZATION.md)。
-4. 用 `scripts/gateway.py <handoff.json>` 原样交接已准备请求。CREATE_DRAFT 要求 payload.is_draft=true；公开提交要求用户本次明确发布且 explicit_publication_confirmation=true、payload.is_draft=false。不自动选择账号，不升级草稿。
-5. 创建草稿后用同一 media_id 查询并核对；超时返回 SUBMITTED_UNVERIFIED，不盲重试。publish_id 只是提交，只有真实查询 success 才报告 PUBLISHED。
-
-更新需用户确认；有本地修改先备份，再明确确认覆盖。参见 [UPDATE](references/UPDATE.md)。诊断运行 `scripts/doctor.sh --agent <agent>`。
-本技能完全独立，不读取或调用其他 Skill，不依赖内容工厂或 AG1—AG6。
+安装、检查更新与回退见 [维护指南](references/UPDATE.md)。首次或间隔7天进行一次非阻断版本检查；用户确认后才更新。此技能独立运行，不连接用户的其他业务系统，不上传工作区或历史资料。

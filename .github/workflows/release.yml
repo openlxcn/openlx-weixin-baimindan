@@ -14,8 +14,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           test "${{ github.event.release.prerelease }}" = true
-          test "${{ github.event.release.tag_name }}" = v0.1.0
+          test "${{ github.event.release.tag_name }}" = "v$(cat VERSION)"
           mkdir -p dist
-          gh release download v0.1.0 --dir dist
+          gh release download "v$(cat VERSION)" --dir dist
           cd dist
           sha256sum -c SHA256SUMS

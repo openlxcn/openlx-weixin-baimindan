@@ -2,38 +2,29 @@
   {
     "agent_id": "codex",
     "status": "ADAPTED_PENDING_VERIFICATION",
-    "installation": "PASS: macOS first-party Shell + doctor",
-    "loading": "BLOCKED",
-    "invocation": "BLOCKED",
-    "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "原生CLI调用被现有API凭据401阻止；目录安装与doctor通过。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "agent_name": "Codex",
     "display_note": "支持原生 Skill 目录安装",
-    "installation_mode": "native_directory"
+    "installation_mode": "native_directory",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "claude",
     "status": "ADAPTED_PENDING_VERIFICATION",
-    "installation": "PASS: macOS first-party Shell + doctor",
-    "loading": "PASS",
-    "invocation": "PARTIAL",
-    "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "原生宿主已加载，doctor与非阻断检查返回；原生更新执行未取得工具级读回。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "agent_name": "Claude Code",
     "display_note": "支持原生 Skill 目录安装",
-    "installation_mode": "native_directory"
+    "installation_mode": "native_directory",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "cursor",
     "status": "ADAPTED_PENDING_VERIFICATION",
-    "installation": "PASS: macOS first-party Shell + doctor",
-    "loading": "BLOCKED",
-    "invocation": "BLOCKED",
-    "update": "PASS: installed manager and isolated 0.1.1 simulation",
-    "notes": "应用已安装，原生Agent未登录；目录安装与doctor通过。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "agent_name": "Cursor",
     "display_note": "支持原生 Skill 目录安装",
-    "installation_mode": "native_directory"
+    "installation_mode": "native_directory",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "workbuddy",
@@ -41,9 +32,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "doubao-office",
@@ -51,9 +43,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "qianwen-office",
@@ -61,9 +54,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "baidu-dazi",
@@ -71,9 +65,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "zcode",
@@ -81,9 +76,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "trae-work",
@@ -91,9 +87,10 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   },
   {
     "agent_id": "qoder",
@@ -101,8 +98,9 @@
     "status": "VERIFIED",
     "verification_basis": "OWNER_CONFIRMED_END_TO_END",
     "confirmed_at": "2026-09-05",
-    "notes": "Owner本轮确认：团队已实际测试，完整可用。",
+    "notes": "基础宿主兼容记录；新版本的安装验证独立记录。",
     "display_note": "OpenLX 团队实测可用",
-    "installation_mode": "host_skill_import"
+    "installation_mode": "host_skill_import",
+    "verified_skill_version": "0.1.0"
   }
 ]

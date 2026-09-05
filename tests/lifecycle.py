@@ -43,4 +43,16 @@ class Lifecycle(unittest.TestCase):
    with self.assertRaisesRegex(ValueError,'TARGET_ACCOUNT_MISMATCH'):g.request({'target_account':'test-a','requested_action':'CREATE_DRAFT','prepared_payload_or_reference':{'appid':'test-b'},'user_intent':'create draft'})
    with self.assertRaisesRegex(ValueError,'EXPLICIT_PUBLICATION'):g.request({'target_account':'test-a','requested_action':'SUBMIT_EXPLICIT_PUBLISH','prepared_payload_or_reference':{'appid':'test-a','is_draft':False},'user_intent':'publish'})
    request.assert_not_called()
+
+ def test_media_and_payload_boundary(self):
+  spec=importlib.util.spec_from_file_location('gateway',R/'skills/openlx-weixin-baimindan/scripts/gateway.py');g=importlib.util.module_from_spec(spec);spec.loader.exec_module(g)
+  h={'target_account':'TEST','requested_action':'SUBMIT_EXPLICIT_PUBLISH','user_intent':'explicit','explicit_publication_confirmation':True,'prepared_payload_or_reference':{'appid':'TEST','type':'voice','is_draft':False,'media_url':'https://example.com/a.mp3'}}
+  with self.assertRaisesRegex(ValueError,'MEDIA_UPLOAD_ONLY'):g.request(h)
+  h['requested_action']='UPLOAD_MEDIA';h['prepared_payload_or_reference']['workspace']='private'
+  with self.assertRaisesRegex(ValueError,'UNSUPPORTED_PAYLOAD_FIELDS'):g.request(h)
+  del h['prepared_payload_or_reference']['workspace']
+  import io,os
+  with patch.dict(os.environ,{'OPENLX_WEIXIN_API_KEY':'TEST_ONLY'}), patch.object(g.urllib.request,'urlopen',return_value=io.BytesIO(b'{"success":true,"operation":"material_upload","published":false}')) as call:
+   result=g.request(h);self.assertFalse(result['published']);self.assertEqual(call.call_count,1);self.assertEqual(call.call_args[0][0].full_url,'https://wx.openlx.cn/v2/proxy/publish');self.assertNotIn('TEST_ONLY',call.call_args[0][0].data.decode())
+
 if __name__=='__main__':unittest.main()
