@@ -7,10 +7,10 @@ OFFICIAL='https://wx.openlx.cn/api/skills/'+ID+'/manifest'
 GITHUB='https://github.com/openlxcn/'+ID+'/releases/download/'
 ROOT=Path.home()/'.openlx'/'skills'/ID
 HOSTS={'codex':('.codex','codex'),'claude':('.claude','claude'),'cursor':('.cursor','cursor')}
-def read(p): return json.loads(p.read_text())
+def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):
  p.parent.mkdir(parents=True,exist_ok=True); os.chmod(p.parent,0o700)
- q=p.with_suffix('.tmp'); q.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n'); os.chmod(q,0o600); q.replace(p)
+ q=p.with_suffix('.tmp'); q.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8'); os.chmod(q,0o600); q.replace(p)
 def digest(b): return hashlib.sha256(b).hexdigest()
 def hashes(p):
  if any(x.is_symlink() for x in p.rglob('*')): raise ValueError('SYMLINK_NOT_ALLOWED')
@@ -63,7 +63,7 @@ def install(a,agent,base,state,dest):
     rel=name[len(prefix):]
     if not rel or ':' in rel: raise ValueError('UNSAFE_ARCHIVE')
     out=stage/rel; out.parent.mkdir(parents=True,exist_ok=True); out.write_bytes(z.read(zi)); os.chmod(out,0o755 if out.suffix in ('.sh','.py') else 0o644)
-  if not (stage/'SKILL.md').is_file() or (stage/'VERSION').read_text().strip()!=v: raise ValueError('PACKAGE_LAYOUT_INVALID')
+  if not (stage/'SKILL.md').is_file() or (stage/'VERSION').read_text(encoding='utf-8').strip()!=v: raise ValueError('PACKAGE_LAYOUT_INVALID')
   prior=[]
   if dest.exists():
    modified=hashes(dest)!=state.get('files',{})
