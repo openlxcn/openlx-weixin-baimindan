@@ -175,13 +175,13 @@ Windows 对应 `scripts/doctor.ps1`、`scripts/check-update.ps1`。具体回退�
 安装使用、公众号授权与白名单服务问题，欢迎扫码联系。
 
 <table>
-<tr><th align="center">白名单服务群</th><th align="center">会长贺双全 · 个人企业微信</th></tr>
+<tr><th align="center">服务群</th><th align="center">对接群</th></tr>
 <tr><td align="center">安装咨询、公众号授权与白名单服务对接</td><td align="center">商务合作、项目交流与资源对接</td></tr>
-<tr><td align="center"><a href="assets/wechat-whitelist-service-qr.png"><img src="assets/wechat-whitelist-service-qr.png" width="264" alt="OpenLX 微信公众号白名单服务群企业微信二维码"></a></td><td align="center"><a href="assets/he-shuangquan-wecom-qr.png"><img src="assets/he-shuangquan-wecom-qr.png" width="264" alt="会长贺双全个人企业微信二维码"></a></td></tr>
-<tr><td align="center">微信扫码加入服务群</td><td align="center">微信扫码添加贺双全</td></tr>
+<tr><td align="center"><a href="assets/wechat-whitelist-service-qr.png"><img src="assets/wechat-whitelist-service-qr.png" width="264" alt="OpenLX 服务群二维码"></a></td><td align="center"><a href="assets/project-contact-qr.png"><img src="assets/project-contact-qr.png" width="264" alt="OpenLX 对接群二维码"></a></td></tr>
+<tr><td align="center">微信扫码加入服务群</td><td align="center">微信扫码联系对接</td></tr>
 </table>
 
-点击二维码可查看原图。手机访问可在[官网联系区域](https://wx.openlx.cn/#contact)查看；如群二维码失效，可添加贺双全企业微信联系入群。
+点击二维码可查看原图。手机访问可在[官网联系区域](https://wx.openlx.cn/#contact)查看；如群二维码失效，可通过对接群二维码联系入群。
 
 ## 版本历史与参与
 
