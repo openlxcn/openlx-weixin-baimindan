@@ -1,0 +1,1 @@
+import fs from 'node:fs';const v=fs.readFileSync('VERSION','utf8').trim();const m=JSON.parse(fs.readFileSync('release-manifest.json'));if(m.latest.beta!==v||m.latest.stable!==null||m.stable!==false)throw Error('VERSION_MISMATCH');console.log('PASS');

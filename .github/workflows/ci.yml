@@ -1,0 +1,43 @@
+name: CI
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: node --test
+      - name: Shell syntax
+        if: runner.os != 'Windows'
+        run: for f in skills/openlx-weixin-baimindan/scripts/*.sh; do sh -n "$f"; done
+      - name: PowerShell syntax
+        shell: pwsh
+        run: |
+          Get-ChildItem skills/openlx-weixin-baimindan/scripts/*.ps1 | ForEach-Object {
+            $Tokens = $null; $Errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$Tokens, [ref]$Errors) | Out-Null
+            if ($Errors.Count) { throw ($Errors | Out-String) }
+          }
+      - name: Create local installer fixture
+        run: python tests/make-installer-fixture.py
+      - name: First-party PowerShell actual install and doctor
+        shell: pwsh
+        run: |
+          $Fixture = Join-Path $env:RUNNER_TEMP 'baimindan-installer-test'
+          & ./skills/openlx-weixin-baimindan/scripts/install.ps1 --agent codex --manifest-file "$Fixture/manifest.json" --package-file "$Fixture/fixture.zip"
+          python "$HOME/.codex/skills/openlx-weixin-baimindan/scripts/manager.py" doctor --agent codex
+          if ($LASTEXITCODE -ne 0) { throw 'DOCTOR_FAILED' }
+      - name: First-party Shell actual install
+        if: runner.os != 'Windows'
+        shell: bash
+        run: sh skills/openlx-weixin-baimindan/scripts/install.sh --agent claude --manifest-file "$RUNNER_TEMP/baimindan-installer-test/manifest.json" --package-file "$RUNNER_TEMP/baimindan-installer-test/fixture.zip"

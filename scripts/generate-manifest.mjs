@@ -1,0 +1,1 @@
+import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('dist/release-manifest.json')); if(!m.versions['0.1.0'].files[0].sha256) throw Error('BUILD_REQUIRED'); console.log(JSON.stringify(m,null,2));

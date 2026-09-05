@@ -1,0 +1,1 @@
+// Behavioral update cases are in lifecycle.py, executed by install.test.mjs.

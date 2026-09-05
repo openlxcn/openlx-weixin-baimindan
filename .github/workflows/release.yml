@@ -1,0 +1,21 @@
+name: Verify immutable beta release
+on:
+  release:
+    types: [prereleased]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify beta and downloaded bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "${{ github.event.release.prerelease }}" = true
+          test "${{ github.event.release.tag_name }}" = v0.1.0
+          mkdir -p dist
+          gh release download v0.1.0 --dir dist
+          cd dist
+          sha256sum -c SHA256SUMS

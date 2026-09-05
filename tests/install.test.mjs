@@ -1,0 +1,1 @@
+import {test} from 'node:test';import {execFileSync} from 'node:child_process';test('lifecycle: install, update, refusal, edits, rollback, corruption, interval and intent',()=>{execFileSync(process.platform==='win32'?'python':'python3',['tests/lifecycle.py'],{stdio:'pipe'});});

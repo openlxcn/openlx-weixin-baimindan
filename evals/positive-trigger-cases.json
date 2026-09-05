@@ -1,0 +1,26 @@
+[
+  {
+    "prompt": "换了网络以后公众号API白名单失效怎么办？",
+    "should_trigger": true
+  },
+  {
+    "prompt": "我不想每次换IP都登录公众号后台改白名单。",
+    "should_trigger": true
+  },
+  {
+    "prompt": "通过OpenLX网关把已经准备好的文章创建成公众号草稿。",
+    "should_trigger": true
+  },
+  {
+    "prompt": "检查这个公众号是否已经完成OpenLX授权。",
+    "should_trigger": true
+  },
+  {
+    "prompt": "查询刚才的网关发布状态。",
+    "should_trigger": true
+  },
+  {
+    "prompt": "检查openlx-weixin-baimindan有没有新版本。",
+    "should_trigger": true
+  }
+]

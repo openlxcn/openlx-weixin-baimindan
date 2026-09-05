@@ -1,0 +1,29 @@
+[
+  {
+    "agent_id": "codex",
+    "status": "ADAPTED_PENDING_VERIFICATION",
+    "installation": "PASS: macOS first-party Shell + doctor",
+    "loading": "BLOCKED",
+    "invocation": "BLOCKED",
+    "update": "PASS: installed manager and isolated 0.1.1 simulation",
+    "notes": "原生CLI调用被现有API凭据401阻止；目录安装与doctor通过。"
+  },
+  {
+    "agent_id": "claude",
+    "status": "ADAPTED_PENDING_VERIFICATION",
+    "installation": "PASS: macOS first-party Shell + doctor",
+    "loading": "PASS",
+    "invocation": "PARTIAL",
+    "update": "PASS: installed manager and isolated 0.1.1 simulation",
+    "notes": "原生宿主已加载，doctor与非阻断检查返回；原生更新执行未取得工具级读回。"
+  },
+  {
+    "agent_id": "cursor",
+    "status": "ADAPTED_PENDING_VERIFICATION",
+    "installation": "PASS: macOS first-party Shell + doctor",
+    "loading": "BLOCKED",
+    "invocation": "BLOCKED",
+    "update": "PASS: installed manager and isolated 0.1.1 simulation",
+    "notes": "应用已安装，原生Agent未登录；目录安装与doctor通过。"
+  }
+]

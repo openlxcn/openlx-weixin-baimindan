@@ -1,0 +1,30 @@
+[
+  {
+    "prompt": "帮我写一篇微信公众号文章。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "把这篇文章排版漂亮一点。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "给公众号文章做一张封面。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "把这篇文章改成小绿书。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "分析这个标题好不好。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "优化文章SEO。",
+    "should_trigger": false
+  },
+  {
+    "prompt": "给我规划一个公众号选题。",
+    "should_trigger": false
+  }
+]

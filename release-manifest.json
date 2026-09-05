@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "skill_id": "openlx-weixin-baimindan",
+  "display_name": "OpenLX 微信公众号发布免登录白名单 Skill",
+  "homepage": "https://wx.openlx.cn/skills/openlx-weixin-baimindan",
+  "repository": "https://github.com/openlxcn/openlx-weixin-baimindan",
+  "release_channel": "beta",
+  "stable": false,
+  "latest": {
+    "beta": "0.1.0",
+    "stable": null
+  },
+  "versions": {
+    "0.1.0": {
+      "tag": "v0.1.0",
+      "pre_release": true,
+      "gateway_api_compatibility": "POST /v2/proxy/{publish,draft-get,draft-count,publish-status}; x-api-key",
+      "summary": "独立准备请求交接、首方安装、7天检查、确认更新和回退",
+      "files": []
+    }
+  },
+  "note": "Source descriptor. The Release asset release-manifest.json contains final ZIP hash, size, source commit and build time; excluded from ZIP to avoid self-reference."
+}
